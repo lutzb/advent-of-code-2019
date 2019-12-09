@@ -4,7 +4,7 @@
 
     public static class Day1
     {
-        static void Main(string[] args)
+        public static void Execute()
         {
             int totalFuel = 0;
             string line;
@@ -12,7 +12,7 @@
             var file = new System.IO.StreamReader(@"Day1/Day1-input.txt");
             while((line = file.ReadLine()) != null)
             {
-                System.Console.WriteLine(line);
+                Console.WriteLine(line);
                 var currentFuel = DoCalculation(Int32.Parse(line));
                 totalFuel += currentFuel;
 
@@ -25,8 +25,7 @@
             }
 
             file.Close();
-            System.Console.WriteLine(totalFuel);
-            System.Console.ReadLine();
+            Console.WriteLine("Total Fuel: " + totalFuel);
         }
 
         private static int DoCalculation(int i)
